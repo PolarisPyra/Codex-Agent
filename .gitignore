@@ -4,13 +4,13 @@
 # Allow the .gitignore itself
 !.gitignore
 
-# Allow the root AGENTS.md
+# Allow the root AGENTS.md (Orchestrator)
 !AGENTS.md
 
-# Allow the roles directory and all AGENTS.md files within it
+# Allow the roles directory and all SKILL.md files within it
 !roles/
 !roles/**/
-!roles/**/AGENTS.md
+!roles/**/SKILL.md
 
 # Explicitly ignore the rules folder as requested
 /rules/

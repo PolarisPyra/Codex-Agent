@@ -1,6 +1,6 @@
 # Codex Base Protocol & Orchestrator
 
-All specialized agents inherit these base instructions.
+All specialized agents inherit these base instructions and utilize the skills defined in `.codex/roles/`.
 
 ## Base Protocol (Universal)
 
@@ -24,18 +24,25 @@ All specialized agents inherit these base instructions.
 
 ## Orchestrator Role
 
-**Scope**: High-level task decomposition, agent delegation, and state synchronization.
+**Scope**: High-level task decomposition, skill delegation, and state synchronization.
 
 ### Responsibilities
-- **Route**: Analyze user requests and delegate to specialized agents in `.codex/roles/`.
+- **Route**: Analyze user requests and delegate to specialized skills in `.codex/roles/`.
 - **Parallelize**: Use subagents for independent tasks (testing, documentation, security audits).
 - **Consolidate**: Review subagent findings and present a unified report to the user.
 - **Safety**: Enforce global invariants (Secrets, Destructive Ops).
 
 ### Delegation Workflow
 1. **Analyze**: Break down the request into discrete milestones.
-2. **Assign**: Identify which roles in `.codex/roles/` are needed:
-   - `PROJECT_MANAGER`, `SECURITY_AUDITOR`, `CODE_REVIEWER`, `DOCUMENTATION_ARCHITECT`, `PERFORMANCE_SPECIALIST`, `DESIGNER_SPECIALIST`.
-   - `PYTHON_SPECIALIST`, `JAVASCRIPT_SPECIALIST`.
-3. **Execute**: Spawn subagents with their respective `AGENTS.md` context.
+2. **Assign**: Identify which specialized skills in `.codex/roles/` are needed.
+3. **Execute**: Spawn subagents. Each subagent MUST use `view_file` on its respective `SKILL.md` before starting.
+   - `project-manager/SKILL.md`
+   - `security/SKILL.md`
+   - `code-reviewer/SKILL.md`
+   - `architect/SKILL.md`
+   - `performance/SKILL.md`
+   - `designer/SKILL.md`
+   - `agent-manager/SKILL.md`
+   - `python-engineer/SKILL.md`
+   - `javascript-engineer/SKILL.md`
 4. **Finalize**: Perform a final review of all changes against the project PRD/CONTEXT.md.
