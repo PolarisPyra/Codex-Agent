@@ -1,6 +1,6 @@
 ---
 name: agent-manager
-description: "Manage multiple local CLI agents via tmux sessions (start/stop/monitor/assign) with cron-friendly scheduling."
+description: "Orchestrate specialized agents (employees) by matching tasks to their SKILL.md profiles."
 risk: unknown
 source: community
 date_added: "2026-05-07"
@@ -10,26 +10,32 @@ date_added: "2026-05-07"
 
 ## When to Use
 Use this skill when you need to:
-- Run multiple local CLI agents in parallel (separate tmux sessions).
-- Start/stop agents and tail their logs.
-- Assign tasks to agents and monitor output.
-- Schedule recurring agent work (cron).
+- Select the correct specialist (agent) for a specific task.
+- Coordinate multi-agent workflows where different skills are needed in sequence.
+- Manage the "Fleet" of available roles and understand their specific capabilities.
 
-## Prerequisites
-- Install `agent-manager-skill` in your workspace.
-- Requires `tmux` and `python3`.
+## Agent Fleet (The Employees)
 
-## Common commands
-- `python3 agent-manager/scripts/main.py doctor`
-- `python3 agent-manager/scripts/main.py list`
-- `python3 agent-manager/scripts/main.py start [AGENT_ID]`
-- `python3 agent-manager/scripts/main.py monitor [AGENT_ID] --follow`
-- `python3 agent-manager/scripts/main.py assign [AGENT_ID] <<'EOF' ... EOF`
+| Agent ID | Role | Deployment Scenario |
+|----------|------|---------------------|
+| `project-manager` | Project Manager | Planning, TODO management, Triage, Milestones. |
+| `security-engineer` | Security Engineer | Secret scanning, vulnerability audits, permission checks. |
+| `code-reviewer` | Code Reviewer | TDD, logic verification, standards compliance. |
+| `solutions-architect` | Solutions Architect | CONTEXT.md updates, ADRs, technical strategy. |
+| `performance-engineer` | Performance Engineer | Profiling, bottlenecks, algorithmic optimization. |
+| `product-designer` | Product Designer | Obsidian Void aesthetic, UI tokens, CSS/Tailwind. |
+| `python-engineer` | Python Engineer | `uv`, `ruff`, `mypy`, `pytest`, idiomatic Python logic. |
+| `javascript-engineer` | JavaScript Engineer | Frontend/Backend JS/TS, Web APIs, Vite/Next.js. |
+
+## Dispatching Logic
+1. **Analyze**: Determine the domain of the request (e.g., UI, Security, Backend).
+2. **Select**: Match the domain to the `Agent ID` in the Fleet.
+3. **Invoke**: Refer to the respective `SKILL.md` in `.codex/roles/[Agent-ID]/` for execution details.
 
 ## Notes
-- Agents are configured under an `agents/` directory.
+- `agent-manager` is the bridge between a raw user request and a specialized execution.
+- Always check if a task requires multiple agents (e.g., `python-engineer` + `code-reviewer`).
 
 ## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+- Do not perform the work of a specialist; only delegate and coordinate.
+- If no agent matches the task, escalate to the Orchestrator for clarification.
