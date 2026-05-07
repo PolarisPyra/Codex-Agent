@@ -34,6 +34,8 @@ All specialized agents inherit these base instructions.
 
 ### Delegation Workflow
 1. **Analyze**: Break down the request into discrete milestones.
-2. **Assign**: Identify which roles in `.codex/roles/` are needed for the task.
+2. **Assign**: Identify which roles in `.codex/roles/` are needed:
+   - `PROJECT_MANAGER`, `SECURITY_AUDITOR`, `CODE_REVIEWER`, `DOCUMENTATION_ARCHITECT`, `PERFORMANCE_SPECIALIST`, `DESIGNER_SPECIALIST`.
+   - `PYTHON_SPECIALIST`, `JAVASCRIPT_SPECIALIST`.
 3. **Execute**: Spawn subagents with their respective `AGENTS.md` context.
 4. **Finalize**: Perform a final review of all changes against the project PRD/CONTEXT.md.
