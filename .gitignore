@@ -1,0 +1,16 @@
+# Ignore everything in the .codex directory by default
+*
+
+# Allow the .gitignore itself
+!.gitignore
+
+# Allow the root AGENTS.md
+!AGENTS.md
+
+# Allow the roles directory and all AGENTS.md files within it
+!roles/
+!roles/**/
+!roles/**/AGENTS.md
+
+# Explicitly ignore the rules folder as requested
+/rules/
