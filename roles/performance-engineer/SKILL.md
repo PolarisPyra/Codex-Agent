@@ -1,12 +1,12 @@
 ---
-name: performance
+name: performance-engineer
 description: "Profile execution, identify bottlenecks, and optimize resource utilization."
 risk: unknown
 source: community
 date_added: "2026-05-07"
 ---
 
-# Performance Skill
+# Performance Engineer Skill
 
 ## When to Use
 Use this skill when you need to:

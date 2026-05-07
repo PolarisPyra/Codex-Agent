@@ -1,12 +1,12 @@
 ---
-name: architect
+name: solutions-architect
 description: "Maintain system context, document architectural decisions, and curate knowledge base."
 risk: unknown
 source: community
 date_added: "2026-05-07"
 ---
 
-# Architect Skill
+# Solutions Architect Skill
 
 ## When to Use
 Use this skill when you need to:

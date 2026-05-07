@@ -1,12 +1,12 @@
 ---
-name: security
+name: security-engineer
 description: "Audit codebase for vulnerabilities, detect secrets, and enforce permission modeling."
 risk: unknown
 source: community
 date_added: "2026-05-07"
 ---
 
-# Security Skill
+# Security Engineer Skill
 
 ## When to Use
 Use this skill when you need to:

@@ -1,12 +1,12 @@
 ---
-name: javascript
+name: javascript-engineer
 description: "Build modern JS/TS applications, manage frontend state, and optimize web performance."
 risk: unknown
 source: community
 date_added: "2026-05-07"
 ---
 
-# JavaScript Skill
+# JavaScript Engineer Skill
 
 ## When to Use
 Use this skill when you need to:

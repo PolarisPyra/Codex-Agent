@@ -1,12 +1,12 @@
 ---
-name: designer
+name: product-designer
 description: "Implement high-fidelity dark UI (Obsidian Void) and enforce design system standards."
 risk: unknown
 source: community
 date_added: "2026-05-07"
 ---
 
-# Designer Skill
+# Product Designer Skill
 
 ## When to Use
 Use this skill when you need to:

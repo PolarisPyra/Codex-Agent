@@ -1,12 +1,12 @@
 ---
-name: python
+name: python-engineer
 description: "Implement idiomatic Python, manage dependencies with uv, and ensure type safety."
 risk: unknown
 source: community
 date_added: "2026-05-07"
 ---
 
-# Python Skill
+# Python Engineer Skill
 
 ## When to Use
 Use this skill when you need to:

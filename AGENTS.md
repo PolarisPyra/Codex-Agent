@@ -37,11 +37,11 @@ All specialized agents inherit these base instructions and utilize the skills de
 2. **Assign**: Identify which specialized skills in `.codex/roles/` are needed.
 3. **Execute**: Spawn subagents. Each subagent MUST use `view_file` on its respective `SKILL.md` before starting.
    - `project-manager/SKILL.md`
-   - `security/SKILL.md`
+   - `security-engineer/SKILL.md`
    - `code-reviewer/SKILL.md`
-   - `architect/SKILL.md`
-   - `performance/SKILL.md`
-   - `designer/SKILL.md`
+   - `solutions-architect/SKILL.md`
+   - `performance-engineer/SKILL.md`
+   - `product-designer/SKILL.md`
    - `agent-manager/SKILL.md`
    - `python-engineer/SKILL.md`
    - `javascript-engineer/SKILL.md`

@@ -25,7 +25,7 @@ Use this skill when you need to:
 ## Notes
 - Prefer "One Real Code Path" over complex branching.
 - Logic coverage is mandatory for all new business logic.
-- For language-specific quality checks, delegate to the respective Specialist Skill (e.g., Python).
+- For language-specific quality checks, delegate to the respective Specialist Skill (e.g., Python Engineer).
 
 ## Limitations
 - Review is limited to the provided diff or visible files.

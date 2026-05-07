@@ -1,5 +1,5 @@
 ---
-name: project-manager-skill
+name: project-manager
 description: "Manage backlog, track milestones, and maintain project alignment with vertical slices."
 risk: unknown
 source: community
@@ -20,9 +20,9 @@ Use this skill when you need to:
 - Familiarity with `triage` and `to-issues` skills.
 
 ## Common commands
-- `triage` (via skill invocation)
-- `to-issues` (via skill invocation)
-- `to-prd` (via skill invocation)
+- `triage`
+- `to-issues`
+- `to-prd`
 
 ## Notes
 - Every non-trivial task should be linked to an issue.
