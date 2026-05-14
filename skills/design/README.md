@@ -1,10 +1,10 @@
-# Claude Design System Prompt
+# Design Skill
 
-Reverse-engineered system prompt of Claude Design from Anthropic.
+Codex skill wrapping the design-system prompt and procedural design checks.
 
 A system prompt and skill library that turns an LLM into an opinionated, accessibility-aware, AI-slop-resistant design collaborator.
 
-Open source, MIT licensed. Drop the prompt into any LLM that supports system prompts (Claude, GPT, Gemini, local models) and pair with the procedural skills as needed.
+Open source, MIT licensed. The bundled prompt is kept as reference material for explicit design work.
 
 ## What this is
 
@@ -24,37 +24,33 @@ Plus 14 procedural skills the agent can invoke for production, extraction, and r
 ## What's included
 
 ```
-claude-design-system-prompt/
-├── claude/                              Claude Code / Claude.ai variant
-│   ├── system-prompt.md                 Main system prompt — 20 chapters
-│   └── skills/                          14 invokable skills
-│       ├── discovery-questions.md       Kickoff question protocol
-│       ├── frontend-aesthetic-direction.md  Commit to a look when no brand exists
-│       ├── wireframe.md                 Low-fi exploration, 3+ variations
-│       ├── make-a-deck.md               Slide presentations in HTML
-│       ├── make-a-prototype.md          Interactive clickable prototype
-│       ├── make-tweakable.md            Floating tweak panel
-│       ├── generate-variations.md       3+ hi-fi variations across axes
-│       ├── design-system-extract.md     Pull tokens from sources
-│       ├── component-extract.md         Inventory reusable components
-│       ├── accessibility-audit.md       WCAG, semantic, keyboard, motion
-│       ├── ai-slop-check.md             Gradient / emoji / font trope detection
-│       ├── hierarchy-rhythm-review.md   Size / weight / color + spacing scale
-│       ├── interaction-states-pass.md   Hover / active / disabled / focus / loading
-│       └── polish-pass.md               Umbrella final-gate review
-├── codex/                               OpenAI Codex variant (single-loop, no subagents)
-│   ├── AGENTS.md                        Codex auto-discovered entry point
-│   ├── system-prompt.md                 Same prompt, adapted for Codex
-│   └── skills/                          Same skills, sequential reviews instead of parallel agents
-├── README.md                            This file
-└── LICENSE                              MIT
+skills/design/
+├── SKILL.md                         Codex skill entry point
+├── skills/
+│   ├── system-prompt.md             Main Codex design prompt
+│   ├── discovery-questions.md       Kickoff question protocol
+│   ├── frontend-aesthetic-direction.md  Commit to a look when no brand exists
+│   ├── wireframe.md                 Low-fi exploration, 3+ variations
+│   ├── make-a-deck.md               Slide presentations in HTML
+│   ├── make-a-prototype.md          Interactive clickable prototype
+│   ├── make-tweakable.md            Floating tweak panel
+│   ├── generate-variations.md       3+ hi-fi variations across axes
+│   ├── design-system-extract.md     Pull tokens from sources
+│   ├── component-extract.md         Inventory reusable components
+│   ├── accessibility-audit.md       WCAG, semantic, keyboard, motion
+│   ├── ai-slop-check.md             Gradient / emoji / font trope detection
+│   ├── hierarchy-rhythm-review.md   Size / weight / color + spacing scale
+│   ├── interaction-states-pass.md   Hover / active / disabled / focus / loading
+│   └── polish-pass.md               Umbrella final-gate review
+├── README.md
+└── LICENSE
 ```
 
 ## How to use it
 
-### Use the system prompt directly
+### Use the skill
 
-Paste the contents of `system-prompt.md` as the system prompt for any LLM that supports them. The agent will follow the design philosophy and reference the skills by name when tasks match.
+Load `SKILL.md` for explicit design work. It points to `skills/system-prompt.md` and the relevant procedure files.
 
 ### Use the skills as procedures
 

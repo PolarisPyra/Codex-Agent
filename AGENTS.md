@@ -14,10 +14,9 @@ skills, and memory records in their own files.
 
 ## Design Prompt
 
-- The optional design reference lives at `.codex/design-system-prompt/codex/system-prompt.md`.
-- Do not load `design-system-prompt` for ordinary coding, review, cleanup, filesystem, or reconnaissance tasks.
-- Load it only when the user explicitly asks for design work, such as UI/UX design, visual polish, prototypes, decks, brand direction, interface layout, accessibility design review, or design-system extraction.
-- When that prompt references a matching skill, read only the corresponding file under `.codex/design-system-prompt/codex/skills/`.
+- `skills/design/SKILL.md` is the optional design reference skill.
+- Do not use `design` for ordinary coding, review, cleanup, filesystem, or reconnaissance tasks.
+- Use it only when the user explicitly asks for design work, such as UI/UX design, visual polish, prototypes, decks, brand direction, interface layout, accessibility design review, or design-system extraction.
 
 ## Base Protocol
 

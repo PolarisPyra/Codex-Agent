@@ -12,6 +12,7 @@ This document maps the durable files under `/home/polaris/.codex`.
 
 - `skills/*/SKILL.md`: callable local user/community skills.
 - `skills/.skill-lock.json`: install metadata for migrated user/community skills.
+- `skills/design/`: optional design reference skill and bundled design procedures.
 - `skills/.system/`: system-provided skills. Treat this as generated and do not edit or track it as user policy.
 
 The old `~/.agents/skills` root has been folded into `~/.codex/skills`.
@@ -26,12 +27,6 @@ Do not recreate `.agents` for normal skill work.
 
 Do not manually edit generated memory registry files. Add a new note under
 `memories/extensions/ad_hoc/notes/` only when the user explicitly asks to update memory.
-
-## Design Prompt
-
-- `design-system-prompt/codex/system-prompt.md`: optional design reference.
-- Load it only for explicit design/UI/UX/prototype/visual-polish tasks.
-- Do not load it for ordinary coding, review, cleanup, filesystem, or reconnaissance work.
 
 ## Runtime And Generated Data
 

@@ -29,4 +29,4 @@ This file holds durable behavior that should outlive any one project or role.
 - `roles/` contains specialist role docs.
 - `skills/` contains callable local skills.
 - `memories/` contains generated memory registries plus append-only ad-hoc notes.
-- `design-system-prompt/` is opt-in and only for explicit design work.
+- `skills/design/` is opt-in and only for explicit design work.

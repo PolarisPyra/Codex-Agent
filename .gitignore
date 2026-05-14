@@ -15,10 +15,6 @@
 !roles/**/
 !roles/**/SKILL.md
 
-# Optional design prompt bundle.
-!design-system-prompt/
-!design-system-prompt/**
-
 # Local user/community skills. System-bundled skills stay generated.
 !skills/
 !skills/**
