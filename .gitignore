@@ -28,3 +28,7 @@ skills/.system/**
 
 # Explicitly ignore the rules folder as requested.
 /rules/
+
+# Local scratch notes and explicit memory-update notes are not published.
+/notes/
+/memories/extensions/ad_hoc/notes/
