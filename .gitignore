@@ -1,16 +1,30 @@
-# Ignore everything in the .codex directory by default
+# Ignore everything in the .codex directory by default.
 *
 
-# Allow the .gitignore itself
+# Keep only durable instruction and skill surfaces in this repo.
 !.gitignore
 
-# Allow the root AGENTS.md (Orchestrator)
+# Active home-level instructions.
 !AGENTS.md
+!SOUL.md
+!docs/
+!docs/**
 
-# Allow the roles directory and all SKILL.md files within it
+# Local role docs.
 !roles/
 !roles/**/
 !roles/**/SKILL.md
 
-# Explicitly ignore the rules folder as requested
+# Optional design prompt bundle.
+!design-system-prompt/
+!design-system-prompt/**
+
+# Local user/community skills. System-bundled skills stay generated.
+!skills/
+!skills/**
+!skills/.skill-lock.json
+skills/.system/
+skills/.system/**
+
+# Explicitly ignore the rules folder as requested.
 /rules/

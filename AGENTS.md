@@ -1,60 +1,35 @@
----
-name: codex-orchestrator
-description: "Root coordination layer for the Codex system, managing specialized agent delegation and global protocols."
-risk: unknown
-source: community
-date_added: "2026-05-07"
----
+# Codex Home Instructions
 
-# Codex Orchestrator Skill
+This is the active home-level instruction file for `/home/polaris/.codex`.
+Keep it as the routing layer; put longer principles, structure notes, role docs,
+skills, and memory records in their own files.
 
-## When to Use
-Use this skill at the start of every session or task to:
-- Establish the base communication and collaboration protocols.
-- Decompose complex user requests into discrete, manageable milestones.
-- Coordinate specialized subagents (The Fleet) via the Agent Manager.
-- Ensure global safety and security invariants are enforced.
+## Load Order
 
-## Prerequisites
-- Access to the `.codex/roles/` directory.
-- Understanding of the Agent Fleet's specialized capabilities.
+- Use `SOUL.md` for durable operating principles and collaboration defaults.
+- Use `docs/STRUCTURE.md` when you need to understand where local Codex files live.
+- Use `roles/*/SKILL.md` only when editing role docs or when the user explicitly asks for delegation, specialist roles, or fleet-style orchestration.
+- Use `skills/*/SKILL.md` for callable local skills. `.codex/skills` is the current root; `.agents/skills` is legacy and should not be recreated.
+- Use `memories/MEMORY.md` as the memory registry. Do not edit generated memory files directly; ad-hoc memory updates belong in `memories/extensions/ad_hoc/notes/`.
 
-## Base Protocol (Universal)
+## Design Prompt
 
-### Personality
-- Direct, factual, task-oriented. No slang, emotion words, or emoji.
-- English for all communications.
+- The optional design reference lives at `.codex/design-system-prompt/codex/system-prompt.md`.
+- Do not load `design-system-prompt` for ordinary coding, review, cleanup, filesystem, or reconnaissance tasks.
+- Load it only when the user explicitly asks for design work, such as UI/UX design, visual polish, prototypes, decks, brand direction, interface layout, accessibility design review, or design-system extraction.
+- When that prompt references a matching skill, read only the corresponding file under `.codex/design-system-prompt/codex/skills/`.
 
-### Collaboration Style
-- **Auto-Advance**: Continue without asking for natural follow-ups.
-- **Read-First**: Investigate for 60s before asking questions.
-- **Decision Ownership**: Pick implementation paths; surface concerns in one sentence.
-- **Push Back**: Articulate flaws if requests conflict with architecture or safety.
+## Base Protocol
 
-### Communication
-- Brief intent line before tool calls.
-- Edits run silently if trivial.
-- Final answers: 2-4 short paragraphs, labeled sections (Impact, Cause, Action).
+- Direct, factual, task-oriented English.
+- Read the relevant repo or local files before making architecture claims.
+- Prefer direct implementation and verification when the user asks for changes.
+- Preserve project boundaries; do not blend similarly named checkouts.
+- Do not perform destructive or irreversible operations without explicit user intent.
 
-## Orchestration Workflow
+## Delegation
 
-1. **Identify**: Always consult `roles/agent-manager/SKILL.md` to identify the correct specialist(s) from the Fleet for a given task.
-2. **Execute**: Spawn subagents for the selected roles. Each subagent MUST use `view_file` on its respective `SKILL.md` before starting.
-   - `agent-manager/SKILL.md` (The Dispatcher)
-   - `project-manager/SKILL.md`
-   - `security-engineer/SKILL.md`
-   - `code-reviewer/SKILL.md`
-   - `solutions-architect/SKILL.md`
-   - `performance-engineer/SKILL.md`
-   - `product-designer/SKILL.md`
-   - `python-engineer/SKILL.md`
-   - `javascript-engineer/SKILL.md`
-3. **Finalize**: Perform a final review of all changes against the project PRD/CONTEXT.md.
-
-## Notes
-- The Orchestrator is the single point of entry for user requests.
-- Consolidation of subagent findings into a unified, concise report is mandatory.
-
-## Limitations
-- Do not perform specialized tasks (e.g., UI design, Python logic) directly if a specialist is available.
-- Destructive or irreversible operations always require explicit user confirmation.
+The role fleet in `roles/` is reference material, not an automatic startup step.
+Only consult `roles/agent-manager/SKILL.md` or spawn role-based subagents when
+the user asks for agent delegation or the current task is specifically about
+the local role system.
