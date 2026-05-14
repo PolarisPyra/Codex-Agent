@@ -10,13 +10,12 @@ This document maps the durable files under `/home/polaris/.codex`.
 
 ## Skills
 
-- `skills/*/SKILL.md`: callable local user/community skills.
-- `skills/.skill-lock.json`: install metadata for migrated user/community skills.
-- `skills/design/`: optional design reference skill and bundled design procedures.
-- `skills/.system/`: system-provided skills. Treat this as generated and do not edit or track it as user policy.
+- `/home/polaris/.agents/skills/*/SKILL.md`: callable local user/community skills.
+- `/home/polaris/.agents/.skill-lock.json`: install metadata for local user/community skills.
+- `skills/.system/`: system-provided Codex skills. Treat this as generated and do not edit or track it as user policy.
 
-The old `~/.agents/skills` root has been folded into `~/.codex/skills`.
-Do not recreate `.agents` for normal skill work.
+The `.codex` directory is the Codex runtime/configuration root. The `.agents`
+directory is the user/community skill root.
 
 ## Memory
 
@@ -30,6 +29,6 @@ Do not manually edit generated memory registry files. Add a new note under
 
 ## Runtime And Generated Data
 
-- `sessions/`, `archived_sessions/`, `shell_snapshots/`, `log`, `cache`, sqlite files, auth files, and global state JSON files are runtime/tool state.
+- `skills/`, `sessions/`, `archived_sessions/`, `shell_snapshots/`, `log`, `cache`, sqlite files, auth files, and global state JSON files are runtime/tool state.
 - `vendor_imports/` and `.tmp/` are cached or imported tool data.
 - `rules/` is intentionally ignored by Git here.

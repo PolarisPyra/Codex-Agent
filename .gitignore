@@ -1,7 +1,7 @@
 # Ignore everything in the .codex directory by default.
 *
 
-# Keep only durable instruction and skill surfaces in this repo.
+# Keep only durable instruction surfaces in this repo.
 !.gitignore
 
 # Active home-level instructions.
@@ -15,12 +15,9 @@
 !roles/**/
 !roles/**/SKILL.md
 
-# Local user/community skills. System-bundled skills stay generated.
-!skills/
-!skills/**
-!skills/.skill-lock.json
-skills/.system/
-skills/.system/**
+# Skills are runtime-managed here. Local user/community skills live in
+# /home/polaris/.agents/skills and system-bundled skills stay generated.
+/skills/
 
 # Explicitly ignore the rules folder as requested.
 /rules/

@@ -27,6 +27,7 @@ This file holds durable behavior that should outlive any one project or role.
 
 - `AGENTS.md` is the active routing file.
 - `roles/` contains specialist role docs.
-- `skills/` contains callable local skills.
+- `/home/polaris/.agents/skills/` contains callable local user/community skills.
+- `.codex/skills/.system/` contains generated Codex system skills.
 - `memories/` contains generated memory registries plus append-only ad-hoc notes.
-- `skills/design/` is opt-in and only for explicit design work.
+- Design-specific skills are opt-in and only for explicit design work.

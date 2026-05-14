@@ -9,12 +9,13 @@ skills, and memory records in their own files.
 - Use `SOUL.md` for durable operating principles and collaboration defaults.
 - Use `docs/STRUCTURE.md` when you need to understand where local Codex files live.
 - Use `roles/*/SKILL.md` only when editing role docs or when the user explicitly asks for delegation, specialist roles, or fleet-style orchestration.
-- Use `skills/*/SKILL.md` for callable local skills. `.codex/skills` is the current root; `.agents/skills` is legacy and should not be recreated.
+- Use `/home/polaris/.agents/skills/*/SKILL.md` for callable local user/community skills.
+- Treat `skills/.system/*/SKILL.md` under this directory as generated Codex system skills.
 - Use `memories/MEMORY.md` as the memory registry. Do not edit generated memory files directly; ad-hoc memory updates belong in `memories/extensions/ad_hoc/notes/`.
 
 ## Design Prompt
 
-- `skills/design/SKILL.md` is the optional design reference skill.
+- Design-specific skills are optional local skills under `/home/polaris/.agents/skills` when installed.
 - Do not use `design` for ordinary coding, review, cleanup, filesystem, or reconnaissance tasks.
 - Use it only when the user explicitly asks for design work, such as UI/UX design, visual polish, prototypes, decks, brand direction, interface layout, accessibility design review, or design-system extraction.
 
